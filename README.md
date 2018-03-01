@@ -1,3 +1,10 @@
+## A fork of the Webpack Jarvis Project. Wanted to include additional interactions such as a button for production builds, component generations, and more.
+
+FOR WINDOWS USER: MUST HAVE PYTHON 2.7 INSTALLED AND THE ENVIRONMENT VARIABLE SET.
+```
+npm config set python "c:\Python\27\python.exe"
+```
+
 <h1 align="center">
   <img src="https://github.com/zouhir/jarvis/blob/master/.github/readme-logo.png?raw=true">
 </h1>

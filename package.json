@@ -1,7 +1,7 @@
 {
-  "name": "webpack-jarvis",
-  "version": "0.3.0",
-  "description": "A very intelligent webpack dashboard",
+  "name": "player-dashboard",
+  "version": "0.0.1",
+  "description": "A React/Redux UI development dashboard.",
   "main": "lib/server/index.js",
   "files": [
     "dist"
