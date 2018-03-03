@@ -38,7 +38,7 @@ const Nav = ({
         {emailLink}
         {webLink}
       </li>
-      <li className="snippets">snippets</li>
+      {/* <li className="snippets">snippets</li> */}
     </ul>
   );
 };

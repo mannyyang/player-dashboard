@@ -14,7 +14,7 @@ p.note {
 .card-header {
   padding: 20px 20px 7px 20px;
   font-size: var(--font-body-xs);
-  color: var(--color-dark);
+  color: var(--color-light);
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.7px;
@@ -61,7 +61,7 @@ p.note {
   position: relative;
   background: var(--dashboard-bg-lightest);
   .progress {
-    background: var(--color-main);
+    background: var(--color-blue);
     height: 100%;
   }
 }

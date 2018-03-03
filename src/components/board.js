@@ -68,7 +68,7 @@ export default class Board extends Component {
       });
     });
     socket.on("progress", data => {
-      this.setState({ progress:data });
+      this.setState({ progress: data });
       if (data.message.toLowerCase() !== "idle") {
         this.setState({
           progress: data,
@@ -83,24 +83,26 @@ export default class Board extends Component {
   render(props, state) {
     const ico =
       state.progress.percentage >= 1
-        ? state.errors.length > 0 ? 'failure' : 'success'
-        : 'building';
+        ? state.errors.length > 0 ? "failure" : "success"
+        : "building";
 
     return (
       <div className="board">
-        <Favicon url={ `/assets/favicons/${ico}.ico` } animated={false} />
+        <Favicon url={`/assets/favicons/${ico}.ico`} animated={false} />
 
         <Nav {...state.project} />
 
-        <div className="widget col-xs-12 col-md-4 col-lg-3">
+        <div className="widget col-xs-12 col-md-6 col-lg-10">
+          <Terminal logs={state.logs} />
+        </div>
+        <div className="widget col-xs-12 col-md-3 col-lg-2">
           <MiniCard
             title="Compiler Status"
             note={`done in ${state.time} sec`}
             progress={state.progress.percentage * 100}
             status={state.progress.message || "Idle"}
-            color="fire"
+            // color="fire"
           />
-
           <MiniCard
             title="Errors and Warnings"
             status={state.errors.length}
@@ -109,28 +111,24 @@ export default class Board extends Component {
                 ? "and no warnings"
                 : `and ${state.warnings.length} warnings`
             }
-            color="berry"
+            // color="berry"
           />
           <MiniCard
             title="Total Assets Size"
             status={readableBytes(state.assetsSize)}
             note=""
-            color="evening"
+            // color="evening"
           />
         </div>
-        <div className="widget col-xs-12 col-md-4 col-lg-6">
-          <Terminal logs={state.logs} />
-        </div>
-        <div className="widget  col-xs-12 col-md-4 col-lg-3">
-          <Bundlelist assets={state.assets} />
-        </div>
-
-        <div className="widget col-xs-12 col-md-4 col-lg-6">
+        <div className="widget col-lg-10">
           <Table data={state.modules} />
         </div>
-        <div className="widget col-xs-12 col-md-8 col-lg-6">
-          <PerfBudget assetsSize={state.assetsSize} />
+        <div className="widget col-xs-12 col-md-3 col-lg-2">
+          <Bundlelist assets={state.assets} />
         </div>
+        {/* <div className="widget col-xs-12 col-md-8 col-lg-6">
+          <PerfBudget assetsSize={state.assetsSize} />
+        </div> */}
       </div>
     );
   }
