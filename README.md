@@ -5,24 +5,6 @@ FOR WINDOWS USER: MUST HAVE PYTHON 2.7 INSTALLED AND THE ENVIRONMENT VARIABLE SE
 npm config set python "c:\Python\27\python.exe"
 ```
 
-<h1 align="center">
-  <img src="https://github.com/zouhir/jarvis/blob/master/.github/readme-logo.png?raw=true">
-</h1>
-
-<br />
-
-<div align="center">
-  <a href="https://www.npmjs.com/package/webpack-jarvis">
-    <img src="https://img.shields.io/npm/v/webpack-jarvis.svg" alt="version" />
-  </a>
-  <a href="https://www.npmjs.com/package/webpack-jarvis">
-    <img src="https://img.shields.io/npm/dm/webpack-jarvis.svg" alt="version" />
-  </a>
-  <a href="https://oss.ninja/mit/zouhir">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
-  </a>
-</div>
-
 ## About the Project
 
 J.A.R.V.I.S. (Just A Rather Very Intelligent System) will put in your browser all the relevant information you need from your webpack build whether in dev or in prod.
