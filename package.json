@@ -1,6 +1,6 @@
 {
   "name": "player-dashboard",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A React/Redux UI development dashboard.",
   "main": "lib/server/index.js",
   "files": [
