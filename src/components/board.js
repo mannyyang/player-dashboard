@@ -80,6 +80,9 @@ export default class Board extends Component {
       }
     });
   }
+  _onBuildClick() {
+    socket.emit("build:prod");
+  }
   render(props, state) {
     const ico =
       state.progress.percentage >= 1
@@ -90,7 +93,7 @@ export default class Board extends Component {
       <div className="board">
         <Favicon url={`/assets/favicons/${ico}.ico`} animated={false} />
 
-        <Nav {...state.project} />
+        <Nav {...state.project} onBuildClick={this._onBuildClick} />
 
         <div className="widget col-xs-12 col-md-6 col-lg-10">
           <Terminal logs={state.logs} />

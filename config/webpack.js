@@ -2,7 +2,7 @@ const { join } = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const Jarvis = require("../lib/server");
+const PlayerDashboard = require("../lib/server");
 const pkg = require("../package.json");
 
 const babel = require("./babel");
@@ -43,7 +43,11 @@ module.exports = env => {
     plugins.push(
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
-      new Jarvis()
+      new PlayerDashboard({
+        buildProd: () => {
+          console.log('works')
+        }
+      })
     )
   }
   

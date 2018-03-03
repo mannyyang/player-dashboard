@@ -24,7 +24,6 @@ It is hugely inspired by other webpack dashboards and the core idea is not origi
 * Runs in the browser.
 * Beautified errors output.
 * Easy way figure out total assets size and individual bundles and chunks.
-* It's very beautiful.
 
 **Tech Stack:**
 

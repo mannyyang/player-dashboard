@@ -5,7 +5,8 @@ import If from "../utils/condition-component";
 const Nav = ({
   name = "",
   version = "NaN",
-  makers = { name: "", email: "", url: "" }
+  makers = { name: "", email: "", url: "" },
+  onBuildClick = () => {}
 }) => {
   const emailLink = (
     <If
@@ -39,7 +40,7 @@ const Nav = ({
         {webLink}
       </li>
       <li className="build-button">
-        <button class="button primary" type="button">
+        <button onClick={onBuildClick} class="button primary" type="button">
           Build for Production
         </button>
       </li>
