@@ -38,7 +38,11 @@ const Nav = ({
         {emailLink}
         {webLink}
       </li>
-      {/* <li className="snippets">snippets</li> */}
+      <li className="build-button">
+        <button class="button primary" type="button">
+          Build for Production
+        </button>
+      </li>
     </ul>
   );
 };

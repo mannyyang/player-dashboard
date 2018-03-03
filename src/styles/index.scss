@@ -77,8 +77,6 @@ ul {
   width: 100%;
   max-width: 2800px;
   border-radius: 4px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   box-shadow: 0 6px 20px 0 rgba(37, 45, 71, 0.34);
   color: #e1e1e5;
   z-index: 99;
@@ -89,7 +87,7 @@ ul {
   .widget {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 0px;
     overflow-y: auto;
     max-height: 455px;
     position: relative;
