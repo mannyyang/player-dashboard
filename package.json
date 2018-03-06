@@ -40,7 +40,10 @@
     "react-favicon": "^0.0.11",
     "serve-static": "^1.13.1",
     "socket.io": "^2.0.3",
-    "url-loader": "^0.6.2"
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-hot-middleware": "^2.21.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.10.1",
@@ -71,10 +74,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "svg-url-loader": "^2.1.1",
-    "webpack": "^3.8.1",
-    "webpack-dev-middleware": "^2.0.4",
-    "webpack-hot-middleware": "^2.21.0"
+    "svg-url-loader": "^2.1.1"
   },
   "lint-staged": {
     "src/**/*.{js,json,scss}": [
