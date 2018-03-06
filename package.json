@@ -4,7 +4,8 @@
   "description": "A React/Redux UI development dashboard.",
   "main": "lib/server/index.js",
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ],
   "scripts": {
     "precommit": "lint-staged",
