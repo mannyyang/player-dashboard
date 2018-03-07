@@ -9,9 +9,9 @@ const babel = require("./babel");
 const styles = require("./style");
 const uglify = require("./uglify");
 
-const dist = join(__dirname, "../dist");
+const dist = join(__dirname, "../lib/assets");
 
-module.exports = env => {
+const config = env => {
   const isProd = env && env.production;
   
   // Our style-loader chain
@@ -38,15 +38,13 @@ module.exports = env => {
     );
   } else {
     // Add HMR client
-    entry = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', entry];
+    entry = [/*'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',*/ entry];
     // Add dev-only plugins
     plugins.push(
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new PlayerDashboard({
-        buildProd: () => {
-          console.log('works')
-        }
+        webpackConfig: config
       })
     )
   }
@@ -98,3 +96,5 @@ module.exports = env => {
     }
   };
 };
+
+module.exports = config;
